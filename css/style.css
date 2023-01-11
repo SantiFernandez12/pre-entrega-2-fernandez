@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*  font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+*/
+html{
+    background-color: rgba(34,34,34,1)
+}
+.html-1{
+    scroll-behavior: smooth;
+}
+.page-1{
+    margin: 0 auto;
+    background: linear-gradient(360deg, rgba(34,34,34,1) 7%, rgba(34,34,34,0.8) 13%, rgba(34,34,34,0.05) 23%),
+    url(../assets/images/img-background.png); 
+    background-size: cover;
+    height: 105vh;
+    background-repeat: no-repeat;
+}
+/* BARRA DE NAVEGACION */
+.header-inicio{
+    height: 60px;
+}
+.container-header{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+.container-header a{
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    color: white;
+}
+.logo-texto{
+    font-size: 40px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+.logo-img{
+    height: 45px;
+}
+.nav-bar{
+    display: flex;
+}
+.nav-bar li{
+    list-style: none;
+}
+.nav-bar li a{
+    color: white;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+}
+.nav-bar li a:hover{
+    background-color: orange;
+    transition: 0.3s;
+    color: rgba(34,34,34,1);
+}
+/* MAIN COVER */
+.cover{
+    height: 95vh;
+}
+.container-cover{
+    height: 70vh;
+    max-width: 1200px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.container-cover h1{
+    margin-bottom: 10px;
+    font-size: 100px;
+    letter-spacing: 5px;
+    color: white;
+    max-width: fit-content;
+    display: inline-block;
+    overflow: hidden;
+    border-right: .05em solid orange;
+    white-space: nowrap;
+    animation: typing 2.5s steps(20, end) forwards,
+    blinking .95s infinite;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+@keyframes typing {
+    from { width: 0;}
+    to { width: 100%;}
+}
+@keyframes blinking {
+    from { border-color: transparent;}
+    to { border-color: orange;}
+}
+.container-cover h2{
+    color: white;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+    font-size: 50px;
+}
+.container-cover p{
+    color: white;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+    font-size: 40px;
+}
+.container-cover img{
+    margin-top: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    height: 50px;
+    width: 50px;
+}
+.container-cover img:hover{
+    background-color: orange;
+    transition: 0.3s;
+}
+/* MAIN DESTINOS */
+#destinos{
+    min-height: 90vh;
+    background-color: rgba(34,34,34,1);
+}
+.container-destinos{
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: white 1px solid;
+} 
+.titulo-destinos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.titulo-destinos h3{
+    color: white;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+    font-size: 40px;
+}
+.titulo-destinos h2{
+    color: orange;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.container-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.card .front img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    text-align: center;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 30px;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(24,24,24,1);
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.card .back .link{
+    border-top: solid 1px #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: #fff;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+}
+.card .back .link a:hover{
+    color: orange;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: orange;
+}
+.card .back p{
+    letter-spacing: 1px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; 
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* FOOTER */
+.footer-inicio {
+    background-color: rgba(24,24,24,1);
+    padding: 40px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid orange;
+}
+.content-foo {
+    text-align: center;
+}
+.content-foo h4 {
+    color: white;
+    border-bottom: 3px solid orange;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.content-foo p {
+    color: #ccc;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.titulo-final {
+    text-align: center;
+    font-size: 34px;
+    margin: 20px 0 0 0;
+    color: #fff;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+
+/* TOUR */
+.container-tour{
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+}
+.container-tour h2{
+    text-align: center;
+    margin: 20px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: orange;
+    font-size: 40px;
+}
+.container-tour p{
+    color: #fff;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.tour{
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.tour img{
+    max-width: 45%;
+    border-radius: 10px;
+}
+.tour-1{
+    max-width: 50%;
+}
+.tour-2{
+    max-width: 50%;
+}
+.tour-3{
+    max-width: 50%;
+}
+
+/* GALERIA */
+.html-4{
+    height: 100%;
+    background-color: rgba(34,34,34,1);
+}
+.page-4{
+    min-height: 100%;
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container-grid > *{
+    padding: 5px;
+}
+.header{
+    grid-area: header;
+    color: #fff;
+    align-items: center;
+}
+.nav{
+    grid-area: nav;
+    color: #fff;
+}
+.main{
+    grid-area: main;
+    color: #fff;
+}
+.footer{
+    grid-area: footer;
+    color: #fff;
+}
+
+.container-grid{
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    grid-template: 
+        "header" 50px
+        "nav"    35px
+        "main"   auto
+        "footer" 140px;
+}
+.main-grid{
+    display: grid;
+    text-align: center;
+    height: 100%;
+    gap: 10px;
+    border-top: 1px solid #fff;
+    grid-template: 
+        "main-grid-1" 55px
+        "main-grid-2" 550px
+        "main-grid-3" 550px
+        "main-grid-4" 550px
+        ;
+}
+
+.main-grid-1{
+    grid-area: main-grid-1;
+}
+.main-grid-2{
+    grid-area: main-grid-2;
+    background-image: url(../assets/images/galeria-italia.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.main-grid-3 {
+    grid-area: main-grid-3;
+    background-image: url(../assets/images/galeria-japon.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.main-grid-4{
+    grid-area: main-grid-4;
+    background-image: url(../assets/images/galeria-suiza.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.main-grid-1 .main-grid-titulo{
+    margin-top: 10px;
+    font-size: 50px;
+}
+.main-grid-titulo{
+    color: orange;
+    margin-top: 10px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 30px;
+}
+.logo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-header h2{
+    color: #fff;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 40px;
+}
+.logo-header img{
+    height: 40px;
+}
+.nav-galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-galeria li{
+    list-style: none;
+}
+.nav-galeria li a{
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+.nav-galeria li a:hover{
+    background-color: orange;
+    transition: 0.3s;
+    color: rgba(34,34,34,1);
+}
+.footer{
+    background-color: rgba(24,24,24,1);
+}
+
+/* CONTACTO */
+.form-register{
+    width: 450px;
+    background: rgba(24,24,24,1);
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    height: 500px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: #fff;
+}
+.form-register h4{
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: orange;
+}
+.controls{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid orange;
+    font-size: 16px;
+}
+.form-register p{
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.form-register a{
+    color: #fff;
+    text-decoration: none;
+}
+.form-register a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.form-register .boton{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+
+
+
+@media (max-width: 600px){
+    .container-header{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-cover h1{
+        font-size: 70px;
+    }
+    .container-cover h2{
+        font-size: 40px;
+    }
+    .container-cover p{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 760px) {
+    .container-grid{
+        grid-template: 
+        "header nav" 20px
+        "header nav" 20px
+        "main   main"   auto  
+        "footer footer" 140px/
+        200px   auto;
+    }
+
+    .main-grid{
+        grid-template: 
+        "main-grid-1 main-grid-1" 55px
+        "main-grid-2 main-grid-3" 300px
+        "main-grid-2 main-grid-4" 300px/
+        400px auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-grid{
+        grid-template: 
+        "header nav" 25px
+        "header nav" 25px
+        "main   main"auto
+        "footer footer"140px/
+        200px auto;
+    }
+
+    .main-grid{
+        grid-template:  
+        "main-grid-1 main-grid-1" 55px
+        "main-grid-2 main-grid-3" 400px
+        "main-grid-2 main-grid-4" 400px/
+        500px auto;
+    }
+}
+
